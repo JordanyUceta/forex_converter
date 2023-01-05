@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Converter form {% endblock %}
+
+    {% block content %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in get_flashed_messages(with_categories=true) %}
+            <p class="{{category}}">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <h1>Please fill out the parameters!</h1>
+    <form action="/posting" method="post">
+        <input type="text" name="from" placeholder="from" required> 
+        <input type="text" name="to" placeholder="to" required>
+        <input type="text" name="amount" placeholder="amount" required> 
+        <input type="submit" value="Request">
+    </form>
+    {% endblock %}

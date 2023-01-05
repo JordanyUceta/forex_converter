@@ -1,0 +1,7 @@
+.wrong {
+    padding: 1rem; 
+    font-size: 1.3rem;
+    border-radius: 1rem; 
+    background-color: rgba(255, 0, 0, 0.1);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2) 
+}
